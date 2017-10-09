@@ -1,0 +1,23 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.5",
+    "angular-bootstrap": "2.5.0",
+    "angular-ui-router": "^1.0.7"
+  },
+  "authors": [
+    "Anh Nguyen <anh.nguyen@alpharoe.com>"
+  ],
+  "description": "VeriSource.DependentAudit",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
