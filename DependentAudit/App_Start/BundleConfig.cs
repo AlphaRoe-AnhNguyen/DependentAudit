@@ -29,7 +29,8 @@ namespace DependentAudit
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                     "~/app/app.js",
-                    "~/app/controllers/mainController.js"));
+                    "~/app/controllers/mainController.js",
+                    "~/app/controllers/dependentController.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

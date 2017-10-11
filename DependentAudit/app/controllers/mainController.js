@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('arDepAudit')
-    .controller('MainController', ['$scope', function ($scope) {
+    .controller('MainController', ['$scope', '$state', function ($scope, $state) {
         $scope.itemArray = [
              { id: 1, name: 'Texas' },
              { id: 2, name: 'Kansas' },
@@ -12,5 +12,21 @@
         ];
 
         $scope.selected = { value: $scope.itemArray[0] };
+
+        $scope.goDep = function (id) {
+            alert(id);
+        }
+
+        $scope.goTab = function (name) {
+            $scope.active = name || 'new';
+
+            if (name) {
+                switch (name) {
+                    case "new":
+                        $state.go('depList');
+                        break;
+                }
+            }
+        }
     }]);
 })(angular);

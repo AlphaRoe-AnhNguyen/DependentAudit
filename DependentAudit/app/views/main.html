@@ -1,63 +1,12 @@
 ﻿<div class="panel panel-default">
     <div class="panel-body">
         <uib-tabset active="active">
-            <uib-tab index="0" heading="Pending Verification (4)">
-                <div class="ar-tab-content">
-                    <table class="table table-responsive table-hover">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Relationship</th>
-                                <th>Status</th>
-                                <th></th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Savannah D Tester</td>
-                                <td>Spouse</td>
-                                <td>New</td>
-                                <td>
-                                    <button class="btn ar-btn-outline ar-btn-primary">Edit</button>
-                                    <button class="btn ar-btn-outline ar-btn-primary">Documents</button>
-                                    <button class="btn ar-btn-outline ar-btn-warning">Drop</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Jabba Z Tester</td>
-                                <td>Child</td>
-                                <td class="reject">Reject</td>
-                                <td>
-                                    <button class="btn ar-btn-outline ar-btn-primary">Edit</button>
-                                    <button class="btn ar-btn-outline ar-btn-primary">Documents</button>
-                                    <button class="btn ar-btn-outline ar-btn-warning">Drop</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Stewie Z Tester</td>
-                                <td>Child</td>
-                                <td>New</td>
-                                <td>
-                                    <button class="btn ar-btn-outline ar-btn-primary">Edit</button>
-                                    <button class="btn ar-btn-outline ar-btn-primary">Documents</button>
-                                    <button class="btn ar-btn-outline ar-btn-warning">Drop</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Chrish Z Tester</td>
-                                <td>Child</td>
-                                <td>New</td>
-                                <td>
-                                    <button class="btn ar-btn-outline ar-btn-primary">Edit</button>
-                                    <button class="btn ar-btn-outline ar-btn-primary">Documents</button>
-                                    <button class="btn ar-btn-outline ar-btn-warning">Drop</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <uib-tab index="'new'" heading="Pending Verification (4)" select="goTab('new')">
+                <div class="ar-tab-content" ui-view="depList">
                 </div>
             </uib-tab>
 
-            <uib-tab tabindex="1" heading="Pending Review ({{pending}})">
+            <uib-tab index="'pending'" heading="Pending Review ({{pending}})" select="goTab('pending')">
                 <div class="ar-tab-content">
                     <p>
                         According to our records, information has been provided on the dependents listed below.
@@ -77,7 +26,7 @@
                 </div>
             </uib-tab>
 
-            <uib-tab index="2" heading="Audit Complete (2)">
+            <uib-tab index="'approved'" heading="Audit Complete (2)" select="goTab('approved')">
                 <div class="ar-tab-content">
                     <p>
                         According to our records, the audit is complete for the dependents listed below.
@@ -101,7 +50,7 @@
                 </div>
             </uib-tab>
 
-            <uib-tab index="3" heading="Helpful Resource">
+            <uib-tab index="'resource'" heading="Helpful Resource" select="goTab('resource')">
                 <div class="ar-tab-content">
                     <p>
                         Below is a library of resources for some of the more common documents you may be asked to provide during the dependent verification process.
@@ -109,7 +58,6 @@
                         To return to this site, please close the secondary browser window.
                     </p>
 
-                    
                     <div class="row">
                         <div class="col-sm-2">
                             <ui-select ng-model="selected.value">
@@ -121,7 +69,7 @@
                                 </ui-select-choices>
                             </ui-select>
                         </div>
-                    </div>
+                    </div><br />
 
                     <p>
                         Social Security Cards - Order New or a Replacement:<br />
@@ -135,7 +83,7 @@
                 </div>
             </uib-tab>
 
-            <uib-tab index="4" heading="Contact Us">
+            <uib-tab index="'contact'" heading="Contact Us" select="goTab('contact')">
                 <div class="ar-tab-content">
                     <p>
                         If you have any questions or need assistance during the dependent verification process,

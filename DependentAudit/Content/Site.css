@@ -165,8 +165,16 @@ textarea {
     color: #555;
 }
 
-    .ar-tab-content table tbody > tr > td:not(:last-child) {
+    /*.ar-tab-content table tbody > tr > td:not(:last-child) {
         line-height: 32px;
+    }*/
+
+    .ar-tab-content table tbody > tr > td {
+        line-height: 32px;
+    }
+
+    .ar-tab-content table tbody > tr {
+        cursor: pointer;
     }
 
 .ar .reject {
