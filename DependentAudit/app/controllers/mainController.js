@@ -3,9 +3,14 @@
 
     angular.module('arDepAudit')
     .controller('MainController', ['$scope', function ($scope) {
-        $scope.tabs = [
-            { title: 'Dynamic Title 1', content: 'Dynamic content 1' },
-            { title: 'Dynamic Title 2', content: 'Dynamic content 2', disabled: true }
+        $scope.itemArray = [
+             { id: 1, name: 'Texas' },
+             { id: 2, name: 'Kansas' },
+             { id: 3, name: 'Oklahoma' },
+             { id: 4, name: 'California' },
+             { id: 5, name: 'Seattle' }
         ];
+
+        $scope.selected = { value: $scope.itemArray[0] };
     }]);
 })(angular);

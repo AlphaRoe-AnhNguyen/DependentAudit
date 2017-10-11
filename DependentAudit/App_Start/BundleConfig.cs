@@ -22,6 +22,8 @@ namespace DependentAudit
                       "~/bower_components/angular/angular.js",
                       "~/bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
                       "~/bower_components/angular-ui-router/release/angular-ui-router.js",
+                      "~/bower_components/angular-ui-select/dist/select.js",
+                      "~/bower_components/angular-sanitize/angular-sanitize.js",
                       "~/Scripts/respond.js",
                       "~/Scripts/modernizr-*"));
 
@@ -31,6 +33,7 @@ namespace DependentAudit
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/bower_components/angular-ui-select/dist/select.css",
                       "~/Content/font-awesome-4.7.0/css/font-awesome.min.css",
                       "~/Content/site.css"));
         }

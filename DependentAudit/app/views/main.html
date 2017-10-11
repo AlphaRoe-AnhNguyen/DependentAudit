@@ -1,19 +1,159 @@
 ﻿<div class="panel panel-default">
     <div class="panel-body">
         <uib-tabset active="active">
-            <uib-tab index="0" heading="New">
-                <div>
-                    New Content
+            <uib-tab index="0" heading="Pending Verification (4)">
+                <div class="ar-tab-content">
+                    <table class="table table-responsive table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Relationship</th>
+                                <th>Status</th>
+                                <th></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Savannah D Tester</td>
+                                <td>Spouse</td>
+                                <td>New</td>
+                                <td>
+                                    <button class="btn ar-btn-outline ar-btn-primary">Edit</button>
+                                    <button class="btn ar-btn-outline ar-btn-primary">Documents</button>
+                                    <button class="btn ar-btn-outline ar-btn-warning">Drop</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jabba Z Tester</td>
+                                <td>Child</td>
+                                <td class="reject">Reject</td>
+                                <td>
+                                    <button class="btn ar-btn-outline ar-btn-primary">Edit</button>
+                                    <button class="btn ar-btn-outline ar-btn-primary">Documents</button>
+                                    <button class="btn ar-btn-outline ar-btn-warning">Drop</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Stewie Z Tester</td>
+                                <td>Child</td>
+                                <td>New</td>
+                                <td>
+                                    <button class="btn ar-btn-outline ar-btn-primary">Edit</button>
+                                    <button class="btn ar-btn-outline ar-btn-primary">Documents</button>
+                                    <button class="btn ar-btn-outline ar-btn-warning">Drop</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chrish Z Tester</td>
+                                <td>Child</td>
+                                <td>New</td>
+                                <td>
+                                    <button class="btn ar-btn-outline ar-btn-primary">Edit</button>
+                                    <button class="btn ar-btn-outline ar-btn-primary">Documents</button>
+                                    <button class="btn ar-btn-outline ar-btn-warning">Drop</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </uib-tab>
-            <uib-tab tabindex="1" heading="Pending">
-                <div>
-                    Pending review content
+
+            <uib-tab tabindex="1" heading="Pending Review ({{pending}})">
+                <div class="ar-tab-content">
+                    <p>
+                        According to our records, information has been provided on the dependents listed below.
+                        The documents are being reviewed at this time and their status will be updated within 1 to 2 business days.
+                        Please check back to confirm the final status.
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span class="badge pending">Pending</span>
+                                    Jackie D Tester
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </uib-tab>
-            <uib-tab index="2" heading="Approved">
-                <div>
-                    Approved
+
+            <uib-tab index="2" heading="Audit Complete (2)">
+                <div class="ar-tab-content">
+                    <p>
+                        According to our records, the audit is complete for the dependents listed below.
+                        A confirmation of the final status is indicated underneath the dependent name/relationship.
+                        If you have any questions regarding the final status, please contact the Benefit Service Center at (123)456-7890
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span class="badge approved">Approved</span>
+                                    Johnathan D Tester
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge approved">Approved</span>
+                                    Jimmy D Tester
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </uib-tab>
+
+            <uib-tab index="3" heading="Helpful Resource">
+                <div class="ar-tab-content">
+                    <p>
+                        Below is a library of resources for some of the more common documents you may be asked to provide during the dependent verification process.
+                        Please note, these links will open a third party website in a separate browser window.
+                        To return to this site, please close the secondary browser window.
+                    </p>
+
+                    
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <ui-select ng-model="selected.value">
+                                <ui-select-match>
+                                    <span ng-bind="$select.selected.name"></span>
+                                </ui-select-match>
+                                <ui-select-choices repeat="item in (itemArray | filter: $select.search) track by item.id">
+                                    <span ng-bind="item.name"></span>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                    </div>
+
+                    <p>
+                        Social Security Cards - Order New or a Replacement:<br />
+                        http://www.ssa.gov/ssnumber/
+                    </p>
+
+                    <p>
+                        Tax Return - Order a copy:<br />
+                        http://www.irs.gov/individuals/get-transcript
+                    </p>
+                </div>
+            </uib-tab>
+
+            <uib-tab index="4" heading="Contact Us">
+                <div class="ar-tab-content">
+                    <p>
+                        If you have any questions or need assistance during the dependent verification process,
+                        please contact the Benefit Service Center:
+                    </p>
+
+                    <p>
+                        Toll-Free 1-800-999-9999<br />
+                        8AM TO 5PM<br />
+                        MONDAY - FRIDAY<br />
+                    </p>
+
+                    <p>
+                        Email: benefits@verisource.com<br />
+                        On-Line Chat (accessible in lower right hand corner of browser window.)<br />
+                        8AM TO 5PM<br />
+                        MONDAY - FRIDAY<br />
+                    </p>
                 </div>
             </uib-tab>
         </uib-tabset>

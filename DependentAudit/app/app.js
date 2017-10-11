@@ -1,7 +1,7 @@
 ﻿(function (angular) {
     'use strict';
 
-    angular.module('arDepAudit', ['ui.bootstrap', 'ui.router'])
+    angular.module('arDepAudit', ['ui.bootstrap', 'ui.router', 'ui.select', 'ngSanitize'])
         .config(['$urlRouterProvider', '$locationProvider', function ($urlRouterProvider, $locationProvider) {
             $urlRouterProvider.otherwise('/');
             $locationProvider.html5Mode(false);

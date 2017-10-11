@@ -23,11 +23,161 @@ textarea {
     max-width: 280px;
 }
 
-.ar .panel-body {
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+.ar .panel {
+    margin: 10px 5px;
 }
 
-.ar .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    border: 1px solid #fff;
-    border-bottom: 3px solid blue;
+.ar .panel-body {
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    height: 580px;
+}
+
+.ar .list-group-item {
+    border: none;
+}
+
+.ar p {
+    text-align: justify;
+}
+
+.ar .req {
+    color: #ff0000;
+}
+
+.ar .upload {
+    color: #07e66b;
+    line-height: 28px;
+}
+
+.ar-btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.ar-btn-primary.ar-btn-outline {
+    color: #428bca;
+    border: 1px solid #428bca;
+}
+
+    .ar-btn-primary.ar-btn-outline:hover {
+        background-color: #428bca;
+        color: #fff;
+    }
+
+.ar-btn-success.ar-btn-outline {
+    color: #5cb85c;
+    border: 1px solid #5cb85c;
+}
+
+    .ar-btn-success.ar-btn-outline:hover {
+        background-color: #5cb85c;
+        color: #fff;
+    }
+
+.ar span.input-group-addon {
+    background-color: #428bca;
+    color: #fff;
+    border: 1px solid #428bca;
+}
+
+    .ar span.input-group-addon:hover {
+        cursor: pointer;
+        color: #428bca;
+        background-color: #fff;
+    }
+
+.ar .name {
+    line-height: 32px;
+}
+
+.ar .glyphicon {
+    top: 2px;
+}
+
+.ar-btn-info.ar-btn-outline {
+    color: #428bca;
+    border: 1px solid #428bca;
+}
+
+    .ar-btn-info.ar-btn-outline:hover {
+        background-color: #428bca;
+        color: #fff;
+    }
+
+.ar-btn-warning.ar-btn-outline {
+    color: #f0ad4e;
+    border: 1px solid #f0ad4e;
+}
+
+    .ar-btn-warning.ar-btn-outline:hover {
+        background-color: #f0ad4e;
+        color: #fff;
+    }
+
+.ar-btn-danger.ar-btn-outline {
+    color: #d9534f;
+    border: 1px solid #d9534f;
+}
+
+    .ar-btn-danger.ar-btn-outline:hover {
+        background-color: #d9534f;
+        color: #fff;
+    }
+
+.ar-btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+    .ar-btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+
+.ar .nav-tabs > li {
+    margin-bottom: -2px;
+}
+
+    .ar .nav-tabs > li > a {
+        color: #555;
+    }
+
+    .ar .nav-tabs > li.active > a, .ar .nav-tabs > li.active > a:hover, .ar .nav-tabs > li.active > a:focus {
+        border: 1px solid #fff;
+        border-bottom: 3px solid #428bca;
+        color: #428bca;
+    }
+
+.ar-tab-content {
+    padding: 10px;
+    color: #555;
+}
+
+    .ar-tab-content table tbody > tr > td:not(:last-child) {
+        line-height: 32px;
+    }
+
+.ar .reject {
+    color: #ff0000;
+}
+
+.ar .badge.approved {
+    background-color: #0da72c;
+}
+
+.ar .badge.pending {
+    background-color: #f0ad4e;
+}
 }

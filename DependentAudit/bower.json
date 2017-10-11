@@ -3,8 +3,10 @@
   "private": true,
   "dependencies": {
     "angular": "1.5.5",
-    "angular-bootstrap": "2.5.0",
-    "angular-ui-router": "^1.0.7"
+    "angular-bootstrap": "~2.5.0",
+    "angular-ui-router": "~1.0.8",
+    "angular-ui-select": "~0.19.8",
+    "angular-sanitize": "~1.6.6"
   },
   "authors": [
     "Anh Nguyen <anh.nguyen@alpharoe.com>"
@@ -19,5 +21,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "resolutions": {
+    "angular": ">= 1.2.0"
+  }
 }
